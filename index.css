@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    background-color: #252839;
+    transform: translate(-50%, -50%);
+}
+.Outer_Div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.textStyling {
+    position: relative;
+    display: inline-flex;
+    top: 50%;
+    left: 50%;
+    justify-content: center;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    font-size: 5em;
+    color: #252839;
+    -webkit-text-stroke: 2px #329d52;
+    text-transform: uppercase;
+}
+h2::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #329d52;
+    -webkit-text-stroke: 0px #329d52;
+    border-right: 4px solid #329d52;
+    overflow: hidden;
+    animation: animate 2s linear;
+    animation-fill-mode: forwards;
+}
+@keyframes animate {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 1010px) {
+    .textStyling {
+        font-size: 4em;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .textStyling {
+        font-size: 3em;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .textStyling {
+        font-size: 2em;
+    }
+}
+@media only screen and (max-width: 410px) {
+    .textStyling {
+        font-size: 1.5em;
+        -webkit-text-stroke: 1px #329d52;
+    }
+}
